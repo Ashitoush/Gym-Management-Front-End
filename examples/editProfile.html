@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../assets/img/apple-icon.png"
+    />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>User Profile</title>
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <!--     Fonts and icons     -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS Files -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../assets/demo/demo.css" rel="stylesheet" />
+    <style>
+      .form-control.pointer {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #f4f3ef">
+    <div class="wrapper">
+      <div class="sidebar" data-color="white" data-active-color="danger">
+        <div class="logo">
+          <span
+            class="simple-text logo-image-mini"
+            style="width: 8rem; height: auto; display: block; margin: 0 auto"
+          >
+            <div class="logo-image-small">
+              <img src="../assets/img/logo-small.png" />
+            </div>
+            <!-- <p>CT</p> -->
+          </span>
+          <span
+            id="fullName"
+            class="simple-text logo-normal"
+            style="display: block; margin: 0 auto; width: 10rem"
+          >
+            Ashitoush Rawal
+            <!-- <div class="logo-image-big">
+            <img src="../assets/img/apple-icon.png">
+          </div> -->
+          </span>
+        </div>
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li>
+              <a href="./userDashboard.html">
+                <i class="nc-icon nc-bank"></i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li class="active">
+              <a href="./userProfile.html">
+                <i class="nc-icon nc-single-02"></i>
+                <p>User Profile</p>
+              </a>
+            </li>
+            <li>
+              <a href="./bodyStats.html">
+                <i class="nc-icon nc-bold"></i>
+                <p>Body Stats</p>
+              </a>
+            </li>
+            <li>
+              <a href="./announcement.html">
+                <i class="nc-icon nc-bell-55"></i>
+                <p>Announcement</p>
+              </a>
+            </li>
+            <li>
+              <a href="./payment.html">
+                <i class="nc-icon nc-credit-card"></i>
+                <p>Payment</p>
+              </a>
+            </li>
+            <li>
+              <a href="./subscription.html">
+                <i class="nc-icon nc-bookmark-2"></i>
+                <p>Subscription</p>
+              </a>
+            </li>
+            <li>
+              <a href="./planHistory.html">
+                <i class="nc-icon nc-single-copy-04"></i>
+                <p>Plan History</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-panel">
+        <!-- Navbar -->
+        <nav
+          class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent"
+        >
+          <div class="container-fluid">
+            <div class="navbar-wrapper">
+              <div class="navbar-toggle">
+                <button type="button" class="navbar-toggler">
+                  <span class="navbar-toggler-bar bar1"></span>
+                  <span class="navbar-toggler-bar bar2"></span>
+                  <span class="navbar-toggler-bar bar3"></span>
+                </button>
+              </div>
+              <a class="navbar-brand" href="javascript:;">Edit User Profile</a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navigation"
+              aria-controls="navigation-index"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-bar navbar-kebab"></span>
+              <span class="navbar-toggler-bar navbar-kebab"></span>
+              <span class="navbar-toggler-bar navbar-kebab"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navigation"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link btn-rotate" href="#">
+                    <i class="nc-icon nc-button-power"></i>
+                    <p>
+                      <span class="d-lg-none d-md-block">Logout</span>
+                      <span>Log Out</span>
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+        <div class="content">
+          <div class="col-md-10 mx-auto">
+            <div class="card card-user">
+              <div class="card-header">
+                <h5 class="card-title">User Detail</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="row">
+                    <div class="col-md-6 pr-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <span
+                          id="email"
+                          class="form-control pointer"
+                          disabled=""
+                          readonly
+                        >
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-md-6 pl-1">
+                      <div class="form-group">
+                        <label>Username</label>
+                        <span
+                          id="userName"
+                          class="form-control pointer"
+                          disabled=""
+                          readonly
+                        >
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 pr-1">
+                      <div class="form-group">
+                        <label>First Name</label>
+                        <input
+                            type="text"
+                          id="firstName"
+                          class="form-control pointer"
+                        >
+                      </input>
+                      </div>
+                    </div>
+                    <div class="col-md-4 pr-1">
+                      <div class="form-group">
+                        <label>Middle Name</label>
+                        <input
+                        type="text"
+                          id="middleName"
+                          class="form-control pointer"
+                        >
+                      </input>
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                      <div class="form-group">
+                        <label>Last Name</label>
+                        <input
+                        type="text"
+                          id="lastName"
+                          class="form-control pointer"
+                        >
+                      </input>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Address</label>
+                        <input
+                            type="text"
+                          id="address"
+                          class="form-control pointer"
+                        >
+                      </input>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 pr-1">
+                      <div class="form-group">
+                        <label>Phone Number</label>
+                        <input
+                        type="text"
+                          id="phoneNumber"
+                          class="form-control pointer"
+                        >
+                      </input>
+                      </div>
+                    </div>
+                    <div class="col-md-4 px-1">
+                      <div class="form-group">
+                        <label>Gender:</label>
+                        <span id="gender" class="form-control pointer" readonly>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth</label>
+                        <input
+                        type="date"
+                          id="dob"
+                          class="form-control pointer"
+                          readonly
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <input type="number" id="userId" value="" hidden />
+                    <div class="col-md-12 mx-auto">
+                      <button class="btn btn-primary" id="editButton" type="button">Save</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <footer class="footer footer-black footer-white" style="padding: 0">
+            <div class="container-fluid">
+              <div class="row justify-content-center">
+                <div class="credits">
+                  <p class="text-center font-weight-bold">
+                    Gym Management System &copy;
+                    <script>
+                      document.write(new Date().getFullYear());
+                    </script>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+    <script src="../assets/js/request.js"></script>
+    <script src="../assets/js/editUserProfile.js"></script>
+    </script>
+  </body>
+</html>
